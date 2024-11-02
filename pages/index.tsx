@@ -1,9 +1,15 @@
 // pages/index.tsx
-import AFrameScene from "../components/AFrameScene";
+import dynamic from "next/dynamic";
+
+// Dynamically import the A-Frame component to avoid SSR issues
+const AFrameScene = dynamic(() => import("../components/AFrameScene"), {
+  ssr: false,
+});
 
 const Home: React.FC = () => {
   return (
-    <div style={{ height: "100vh", width: "100vw", position: "relative" }}>
+    <div>
+      {/* <h1>A-Frame Virtual Tour</h1> */}
       <AFrameScene />
     </div>
   );
