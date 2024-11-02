@@ -1,9 +1,13 @@
+// src/types/aframe.d.ts
+
 declare namespace JSX {
   interface IntrinsicElements {
     "a-scene": React.DetailedHTMLProps<
       React.HTMLAttributes<HTMLElement>,
       HTMLElement
-    >;
+    > & {
+      embedded?: boolean; // Add the embedded attribute here
+    };
     "a-entity": React.DetailedHTMLProps<
       React.HTMLAttributes<HTMLElement>,
       HTMLElement

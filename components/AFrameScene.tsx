@@ -64,7 +64,8 @@ const AFrameScene: React.FC = () => {
 
   return (
     <a-scene
-      style={{ height: "100%", width: "100%", margin: 0, overflow: "hidden" }}
+      embedded
+      style={{ height: "100vh", width: "100vw", margin: 0, overflow: "hidden" }}
     >
       {/* Sky element for background images */}
       <a-sky id="sky" src="one.jpg" material="opacity: 1"></a-sky>
