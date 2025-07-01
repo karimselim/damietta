@@ -20,16 +20,16 @@ const AFrameScene: React.FC = () => {
       let nextSrc;
 
       // Lazy loading for models based on the current scene
-      if (currentSrc === "one.jpg") {
-        nextSrc = "two.jpg";
+      if (currentSrc === "first.jpg") {
+        nextSrc = "second.jpg";
         modelSceneOne.setAttribute("visible", "false");
         modelSceneTwo.setAttribute("visible", "true");
-      } else if (currentSrc === "two.jpg") {
-        nextSrc = "three.jpg";
+      } else if (currentSrc === "second.jpg") {
+        nextSrc = "third.jpg";
         modelSceneTwo.setAttribute("visible", "false");
         modelSceneThree.setAttribute("visible", "true");
       } else {
-        nextSrc = "one.jpg";
+        nextSrc = "first.jpg";
         modelSceneThree.setAttribute("visible", "false");
         modelSceneOne.setAttribute("visible", "true");
       }
@@ -68,7 +68,7 @@ const AFrameScene: React.FC = () => {
       style={{ height: "100vh", width: "100vw", margin: 0, overflow: "hidden" }}
     >
       {/* Sky element for background images */}
-      <a-sky id="sky" src="one.jpg" material="opacity: 1"></a-sky>
+      <a-sky id="sky" src="first.jpg" material="opacity: 1"></a-sky>
 
       {/* Entities for each scene */}
       <a-entity
