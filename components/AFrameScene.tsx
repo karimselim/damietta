@@ -24,8 +24,8 @@ const AFrameScene: React.FC = () => {
         nextSrc = "second.jpg";
         modelSceneOne.setAttribute("visible", "false");
         modelSceneTwo.setAttribute("visible", "true");
-      } else if (currentSrc === "second.jpg") {
-        nextSrc = "third.jpg";
+      } else if (currentSrc === "third.jpg") {
+        nextSrc = "second.jpg";
         modelSceneTwo.setAttribute("visible", "false");
         modelSceneThree.setAttribute("visible", "true");
       } else {
